@@ -8,7 +8,5 @@ events = soup.find_all(class_= 'event-card-info p-4')
 for event in events:
     title = event.find('h3')
     date = event.find('h6')
-    print(title.text)
-    print(date.text)
-
+    
 #NORMALIZE DATE FORMAT
