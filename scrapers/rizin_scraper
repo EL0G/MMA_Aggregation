@@ -11,6 +11,7 @@ for event in events:
     
     date = parts[0]
     event_name = " ".join(parts[1:])
+    
     with open("events.json", "a", encoding="utf-8") as file:
         json.dump({
             "date": date,
