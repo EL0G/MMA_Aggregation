@@ -1,0 +1,20 @@
+from bs4 import BeautifulSoup
+import requests, http, json
+
+content = requests.get("https://jp.rizinff.com/_tags/%E5%A4%A7%E4%BC%9A%E6%83%85%E5%A0%B1")
+soup = BeautifulSoup(content.text, 'lxml')
+events = soup.find_all('div', class_= 'person',)
+
+for event in events:
+    h4 = event.find('h4')
+    parts = list(h4.stripped_strings)
+    
+    date = parts[0]
+    event_name = " ".join(parts[1:])
+    with open("events.json", "a", encoding="utf-8") as file:
+        json.dump({
+            "date": date,
+            "event": event_name
+        }, file, ensure_ascii=False)
+        file.write("\n")
+
