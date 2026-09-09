@@ -7,7 +7,7 @@ function HomePage() {
         <br></br>
         One Place
       </p>
-      <div class="hero-img"></div>
+      <div className="hero-img"></div>
     </div>
   );
 }

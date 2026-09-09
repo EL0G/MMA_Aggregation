@@ -1,7 +1,7 @@
 
 function NavBar() {
   return (
-    <div class="navbar-container">
+    <div className="navbar-container">
       <nav>
         <a className="navItem" id="siteName">MMAtlas</a>
         <a className="navItem">About</a>
