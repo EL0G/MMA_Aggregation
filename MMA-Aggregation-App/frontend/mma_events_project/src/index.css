@@ -1,3 +1,45 @@
 h1 {
   text-align: center;
 }
+
+#logo {
+  width: 20%;
+  max-width: 500px;
+  height: auto;
+}
+
+.homePage {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-size: 25px;
+  text-align: center;
+}
+
+.navItem {
+  width: 40px;
+  height: 20px;
+
+  padding-right: 10px;
+  margin: 0 0 10px 10px;
+}
+
+.navbar-container {
+  background-color: #2d2c2c;
+  color: white;
+}
+
+#siteName {
+  padding-right: 140px;
+  padding-left: 3px;
+}
+
+.hero-img {
+  background-image: url("./assets/mmalogo.png");
+  width: 50%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: contain;
+  background-position: center -20px;
+  background-repeat: no-repeat;
+}
