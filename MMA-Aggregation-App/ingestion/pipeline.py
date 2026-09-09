@@ -53,7 +53,6 @@ def load_data(data):
     for params in data:
         mma_data = (params["title"], params["date"])
         cur.execute(query, mma_data)
-
     conn.commit()
 
 
@@ -63,6 +62,7 @@ def ingestion_pipeline(source):
     url_req = requests.get(url)
     scrape_func = mma_sources[source]["scraper"]
     scraped_data = scrape_func(url_req)
+    
     # Transform
     normalized_data = normalize_dates(scraped_data, source)
 
