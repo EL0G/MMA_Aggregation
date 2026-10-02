@@ -18,11 +18,23 @@ conn = psycopg.connect(
 if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("""
-        CREATE TABLE MMA_events (
+        CREATE TABLE  IF NOT EXISTS MMA_events (
             id SERIAL PRIMARY KEY,
-            event_name VARCHAR(255),
+            event_name TEXT,
             event_date DATE,
             UNIQUE (event_name, event_date)
-        )
+        );
+        
+        CREATE TABLE IF NOT EXISTS MMA_fighters (
+            id SERIAL PRIMARY KEY,
+            fighter_name TEXT,
+            fighter_age SMALLINT,
+            fighter_height SMALLINT,
+            fighter_weight INTEGER,
+            fighter_country TEXT,
+            fighter_image_link TEXT,
+            fighter_organization TEXT
+        );
     """)
+
     conn.commit()
