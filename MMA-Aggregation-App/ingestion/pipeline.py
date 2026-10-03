@@ -7,7 +7,7 @@ import pandas as pd
 from scrapers.rizin_scraper import rizin_scraper
 from scrapers.ufc_scraper import ufc_scraper
 from scrapers.pfl_scraper import pfl_scraper
-from scrapers.onefc_scraper import onefc_scraper
+from scrapers.onefc_scraper import onefc_events_scraper
 from processing.normalize import normalize_dates
 
 load_dotenv()
@@ -37,7 +37,7 @@ mma_sources = {
         "url": "https://jp.rizinff.com/_tags/%E5%A4%A7%E4%BC%9A%E6%83%85%E5%A0%B1",
         "scraper": rizin_scraper,
     },
-    "one_fc": {"url": "https://www.onefc.com/events/", "scraper": onefc_scraper},
+    "one_fc": {"url": "https://www.onefc.com/events/", "scraper": onefc_events_scraper},
 }
 
 
