@@ -20,6 +20,7 @@ def rizin_scraper(site_req):
             {
                 "date": date,
                 "title": event_name,
+                "org": "RIZIN"
             }
         )
     return events_list

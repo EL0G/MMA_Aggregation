@@ -18,6 +18,7 @@ def ufc_scraper(site_req):
             {
                 "date": date,
                 "title": title,
+                "org": "UFC"
             }
         )
 

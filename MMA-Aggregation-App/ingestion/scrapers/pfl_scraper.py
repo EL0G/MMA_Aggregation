@@ -14,6 +14,7 @@ def pfl_scraper(site_req):
             {
                 "date": date,
                 "title": title,
+                "org":"PFL",
             }
         )
     return events_list
