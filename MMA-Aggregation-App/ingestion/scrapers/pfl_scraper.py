@@ -10,12 +10,14 @@ def pfl_scraper(site_req):
     for event in events:
         title = event.find("h3").text.strip()
         date = event.find("h6").text.strip()
+        mma_organization = "PFL"
+
         events_list.append(
             {
                 "date": date,
                 "title": title,
-                "org":"PFL",
+                "org": mma_organization,
             }
         )
-    return events_list
 
+    return events_list

@@ -16,11 +16,12 @@ def rizin_scraper(site_req):
 
         date = info_parts[0].strip()
         event_name = " ".join(info_parts[1:]).strip()
+        mma_organization = "RIZIN"
         events_list.append(
             {
                 "date": date,
                 "title": event_name,
-                "org": "RIZIN"
+                "org": mma_organization
             }
         )
     return events_list

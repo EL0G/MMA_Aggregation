@@ -13,12 +13,12 @@ def ufc_scraper(site_req):
         parts = list(event.stripped_strings)
         date = parts[0]
         title = parts[1]
-
+        mma_organization = "UFC"
         events_list.append(
             {
                 "date": date,
                 "title": title,
-                "org": "UFC"
+                "org": mma_organization
             }
         )
 
